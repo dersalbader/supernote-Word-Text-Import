@@ -1,0 +1,18 @@
+{
+  "name": "WordTextImport",
+  "desc": "Extract editable text from a .docx Word document and copy it for pasting into a Supernote note.",
+  "iconPath": "assets/icon.png",
+  "versionName": "0.1.9-beta",
+  "versionCode": "10",
+  "pluginID": "wrdtxt4n8k2p6qvz",
+  "pluginKey": "WordTextImport",
+  "jsMainPath": "index",
+  "uses-permissions": [
+    "plugin.permission.FILE:READ",
+    "plugin.permission.FILE:WRITE"
+  ],
+  "reactPackages": [
+    "com.sninsertpage.InsertPagePackage"
+  ],
+  "nativeCodePackage": "/app.npk"
+}

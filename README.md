@@ -1,41 +1,30 @@
 # Word Text Import — Supernote Plugin
 
-**Current beta: v0.1.6**
+Beta test build for Supernote Manta running Chauvet 3.29.44 beta.
 
-Word Text Import is a plugin made specifically for Supernote devices. It allows text from a Microsoft Word .docx file to be imported directly into a Supernote note.
-
-The plugin has been developed and tested on a **Supernote Manta running Chauvet 3.29.45 beta**. Behaviour may vary on other Supernote models or firmware versions.
+Current version: **0.1.9 beta**. The plugin window, instructions and controls now
+use solid opaque backgrounds for clearer reading over handwritten or printed pages.
 
 ## What it does
 
-Word Text Import converts the text from a Word document into editable text inside a Supernote note. This makes it easy to prepare material on a computer and then continue working with it on the Supernote.
+1. Selects a `.docx` Word document with Supernote's file picker.
+2. Extracts its editable text.
+3. Inserts the text directly as an editable text box on the current note page.
+4. Copies the text to the clipboard as a fallback if direct insertion is refused.
 
-For example, you can create a to-do list in Word and import it into your Supernote note without having to type it again.
+Paragraphs, line breaks, tabs and table-cell text are retained. Images, page layout,
+text styling, headers, footers, footnotes and complex Word formatting are not imported.
 
-After importing the text, you can:
+## Safety fallback
 
-- Place it on the current page as a smaller text box.
-- Resize it to suit the available space.
-- Choose where it is positioned on the page.
-- Insert longer material onto the next page of the Supernote note document.
-- Select and reposition the imported text using the Supernote tools.
+The plugin uses Supernote's text-box API rather than editing the proprietary `.note`
+file itself. If the beta firmware refuses direct insertion, the extracted text is copied
+to the clipboard and can still be pasted into a text box.
 
-## How to use it
+## Installation and use
 
-1. Open the Supernote note into which you want to import text.
-2. Start the Word Text Import plugin.
-3. Choose the .docx Word file using the file picker.
-4. Select whether the text should be placed on the current page or on the next page.
-5. Position and resize the imported text as required.
+Install `WordTextImport-v0.1.9-beta.snplg` through the Supernote plugin installation system.
+Open the plugin, select **Choose Word document**, choose a `.docx`, and wait for the
+confirmation. The text is inserted into an editable text box on the current page.
 
-## Installation
-
-Download **WordTextImport-v0.1.6-beta.snplg** from this repository or from the latest GitHub release, then install it using the Supernote plugin installation system.
-
-## Beta status
-
-This is beta software. Test it first with a non-critical note or a copy of an important document.
-
-## Feedback
-
-Testing and feedback are very welcome, especially from users trying the plugin on other Supernote devices or firmware versions.
+Test with a copy of an important note first. This is beta software.
